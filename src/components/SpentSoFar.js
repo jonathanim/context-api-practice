@@ -1,9 +1,20 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from '../context';
 
 function SpentSoFar() {
-    return <div className='alert alert-dark'>
+
+    const { purchases, budget } = useContext(AppContext)
+
+    const totalSpent = purchases.reduce((total, cur) => {
+        return total + cur.price
+    }, 0)
+    console.log(totalSpent)
+
+    const AlertType = totalSpent > budget ? 'alert-danger' : 'alert-success'
+
+    return <div className={`alert ${AlertType}`}>
         <p>
-            Spent so far $1300
+            Spent so far ${totalSpent}
         </p>
     </div>;
 }

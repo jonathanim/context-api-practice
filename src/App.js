@@ -1,5 +1,6 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css'
+import { AppProvider } from './context';
 
 
 import Budget from './components/Budget';
@@ -10,38 +11,37 @@ import AddPurchaseForm from './components/AddPurchaseForm';
 
 
 function App() {
+
   return (
-
-
-
-    <div className='container'>
-      <h1 className='mt-3'>Expense Tracker</h1>
-      <div className='row mt-3'>
-        <div className='col-sm'>
-          <Budget />
+    <AppProvider>
+      <div className='container'>
+        <h1 className='mt-3'>Expense Tracker</h1>
+        <div className='row mt-3'>
+          <div className='col-sm'>
+            <Budget />
+          </div>
+          <div className='col-sm'>
+            <Remaining />
+          </div>
+          <div className='col-sm'>
+            <SpentSoFar />
+          </div>
         </div>
-        <div className='col-sm'>
-          <Remaining />
+        <h2 className='mt-3'>Purchases</h2>
+        <div className='row mt-2'>
+          <Purchases />
         </div>
-        <div className='col-sm'>
-          <SpentSoFar />
+
+        <h2 className='mt-3'>Add Purchase</h2>
+
+        <div className='mt-2'>
+          <AddPurchaseForm />
         </div>
       </div>
-      <h2 className='mt-3'>Purchases</h2>
-      <div className='row mt-2'>
-        <Purchases />
-      </div>
-
-      <h2 className='mt-3'>Add Purchase</h2>
-
-      <div className='mt-2'>
-        <AddPurchaseForm />
-      </div>
-    </div>
 
 
 
-
+    </AppProvider>
   );
 }
 
