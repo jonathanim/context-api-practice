@@ -17,10 +17,12 @@ function EditBudget() {
     }
 
     return <form>
-        <input type='text' required="required" value={myBudget} onChange={(e) => { setMyBudget(e.target.value) }} />
-        <button type='submit' className='btn btn btn-primary' onClick={(e) => handleSubmit(e)}>
-            Modify
-        </button>
+        <div className='input-group'>
+            <input type='text' required="required" value={myBudget} onChange={(e) => { setMyBudget(e.target.value) }} />
+            <button type='submit' className='btn btn btn-primary' onClick={(e) => handleSubmit(e)}>
+                Modify
+            </button>
+        </div>
     </form>
 
 }

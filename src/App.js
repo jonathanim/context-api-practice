@@ -15,8 +15,10 @@ function App() {
   return (
     <AppProvider>
       <div className='container'>
-        <h1 className='mt-3'>Expense Tracker</h1>
-        <div className='row mt-3'>
+        <div className='row'>
+          <h1 className='mt-5 text-center'>Expense Tracker</h1>
+        </div>
+        <div className='row mt-5'>
           <div className='col-sm'>
             <Budget />
           </div>
@@ -28,13 +30,13 @@ function App() {
           </div>
         </div>
         <h2 className='mt-3'>Purchases</h2>
-        <div className='row mt-2'>
+        <div className='row mt-5'>
           <Purchases />
         </div>
 
-        <h2 className='mt-3'>Add Purchase</h2>
+        <h2 className='mt-5'>Add Purchase</h2>
 
-        <div className='mt-2'>
+        <div className='mt-5'>
           <AddPurchaseForm />
         </div>
       </div>

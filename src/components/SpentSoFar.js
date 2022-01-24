@@ -12,7 +12,7 @@ function SpentSoFar() {
 
     const AlertType = totalSpent > budget ? 'alert-danger' : 'alert-success'
 
-    return <div className={`alert ${AlertType}`}>
+    return <div className={`alert ${AlertType} text-center`}>
         <p>
             Spent so far ${totalSpent}
         </p>

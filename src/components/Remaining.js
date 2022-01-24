@@ -11,7 +11,7 @@ function Remaining() {
 
     const AlertType = totalPurchaseCost > budget ? 'alert-danger' : 'alert-success'
 
-    return <div className={`alert ${AlertType}`}>
+    return <div className={`alert ${AlertType} text-center`}>
         <p>Remaining Budget: ${budget - totalPurchaseCost}</p>
     </div >;
 }

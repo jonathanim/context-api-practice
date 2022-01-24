@@ -53,11 +53,14 @@ function AddPurchaseForm() {
                         onChange={(e) => setPrice(e.target.value)}
                     />
                 </div>
-                <div className='col-sm '>
+            </div>
+            <div className='row justify-content-center align-items-center'>
+                <div className='row my-3 mx-auto'>
                     <button type="submit" className='btn btn-primary'>
-                        Add Purchase
+                        Add
                     </button>
                 </div>
+
             </div>
         </form>
     );
